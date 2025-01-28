@@ -8,5 +8,16 @@
       "src": "api/backend_code.js",
       "use": "@vercel/node"
     }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/backend_code.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/frontend/index.js"
+    }
   ]
 }
+
